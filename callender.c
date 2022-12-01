@@ -11,7 +11,7 @@ int main(int argc, char const *argv[])
     int i,j,totaldays,weekday=0,spacecounter=0,year;
     printf("Enter any year: ");
     scanf("%d",&year);
-    printf("-----------Wellcome to %d year-----------",year);
+    printf("\n\n\n-----------Wellcome to %d year-----------\n\n",year);
     if ((year%4==0 && year%100!=0) || (year%400==0))
     {
       daysinmonths[1]=29;
@@ -21,12 +21,12 @@ int main(int argc, char const *argv[])
     {
         printf("\n\n--------------------%s---------------------\n",months[i]);
         printf("\n  sun  mon  tues  wed  thus  fri  sat\n\n");
-        
+
         for ( spacecounter = 1; spacecounter <= weekday; spacecounter++)
         {
             printf("     ");
         }
-        
+
         totaldays=daysinmonths[i];
         for ( j = 1; j <= totaldays; j++)
         {
@@ -37,9 +37,9 @@ int main(int argc, char const *argv[])
                 weekday=0;
                 printf("\n");
             }
-            
+
         }
-        
+
     }
     return 0;
 }
